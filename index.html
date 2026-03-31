@@ -24,7 +24,7 @@
             overflow-x: hidden;
         }
 
-        /* HARD FIX 1: The Nav must be fixed to anchor the logo */
+        /* FIXED NAVIGATION */
         nav {
             position: fixed;
             top: 0;
@@ -40,24 +40,24 @@
             align-items: center;
         }
 
-        /* HARD FIX 2: Logo Overlap - FIXED (Locked on screen, does not scroll) */
+        /* FIXED LOGO: Locked to viewport, 3x size overlap */
         .logo {
-            position: fixed; /* NEW: Changed from absolute to fixed */
+            position: fixed; 
             top: 10px; 
-            height: 240px; /* Thrice the standard size */
+            left: 5%;
+            height: 240px; 
             width: auto;
-            z-index: 2001; /* Must be on top of everything */
+            z-index: 2001; 
             filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.8));
         }
 
-        /* Hero Header with High-resolution, Female-only Imagery */
+        /* Header using your local file: header.png */
         header {
             position: relative;
             height: 90vh;
-            margin-top: 90px; /* Offset for nav */
-            /* IMAGE 1: EXCLUSIVE SERENE INDIAN FEMALE CLIENT, NO THERAPIST */
+            margin-top: 90px;
             background: linear-gradient(rgba(4, 14, 20, 0.4), rgba(4, 14, 20, 0.7)), 
-                        url('https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1600&q=80');
+                        url('header.png');
             background-size: cover;
             background-position: center 30%;
             display: flex;
@@ -89,7 +89,6 @@
             letter-spacing: 3px;
         }
 
-        /* Service Strips - Alternating High-Res Layout */
         .strip {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -122,7 +121,6 @@
             background-position: center;
         }
 
-        /* Footer & Icons */
         .footer {
             background: var(--black-pearl);
             padding: 100px 20px;
@@ -200,7 +198,7 @@
                 <p>A restorative sensory experience using premium essential oils.</p>
             </div>
         </div>
-        <div class="strip-img" style="background-image: url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1000&q=80');"></div>
+        <div class="strip-img" style="background-image: url('massage.png');"></div>
     </section>
 
     <section class="strip" style="direction: rtl;">
@@ -230,7 +228,7 @@
                 <p>A decadent treatment designed to restore your skin's natural, soft glow.</p>
             </div>
         </div>
-        <div class="strip-img" style="background-image: url('https://images.unsplash.com/photo-1601053416244-659f81f18579?auto=format&fit=crop&w=1000&q=80');"></div>
+        <div class="strip-img" style="background-image: url('polishing.png');"></div>
     </section>
 
     <section class="strip" style="direction: rtl;">
