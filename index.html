@@ -51,19 +51,20 @@
             filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.8));
         }
 
-        /* HEADER ADJUSTMENT: Enhanced contrast for text standout */
+        /* HEADER: Adjusted to place text specifically above the woman's back */
         header {
             position: relative;
-            height: 90vh;
+            height: 95vh;
             margin-top: 90px;
-            background: linear-gradient(rgba(4, 14, 20, 0.6), rgba(4, 14, 20, 0.85)), 
+            background: linear-gradient(rgba(4, 14, 20, 0.4), rgba(4, 14, 20, 0.7)), 
                         url('header.png');
             background-size: cover;
             background-position: center;
             display: flex;
-            align-items: center;
-            justify(content): center;
+            align-items: flex-end; /* Align to bottom area */
+            justify-content: center;
             text-align: center;
+            padding-bottom: 120px; /* Positions text precisely above the lower-centered visual */
             border-bottom: 4px solid var(--amethyst);
         }
 
@@ -77,7 +78,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             line-height: 1.1;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.5); /* Text depth */
+            text-shadow: 0px 4px 15px rgba(0,0,0,0.9);
         }
 
         .promo-banner {
@@ -123,7 +124,7 @@
             background-repeat: no-repeat;
         }
 
-        /* ELITE SECTION FIX: massage.png using 'contain' to avoid heavy cropping */
+        /* Elite Section Fix: no heavy cropping */
         #elite-massage-img {
             background-size: contain; 
             background-color: var(--matte-gray);
@@ -167,6 +168,7 @@
         @media (max-width: 768px) {
             .logo { height: 140px; top: 15px; }
             .header-content h1 { font-size: 2.5rem; }
+            header { padding-bottom: 60px; }
             .strip { grid-template-columns: 1fr; }
             .strip-img { height: 350px; background-size: cover !important; }
         }
@@ -250,7 +252,7 @@
                 <p>Traditional, natural hair removal for a clean and soft finish.</p>
             </div>
         </div>
-        <div class="strip-img" style="background-image: url('https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=1000&q=80');"></div>
+        <div class="strip-img" style="background-image: url('waxing.jpg');"></div>
     </section>
 
     <section class="footer">
