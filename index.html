@@ -9,7 +9,7 @@
         :root {
             --black-pearl: #040e14;
             --amethyst: #9b59b6;
-            --deep-amethyst: #7d3c98; /* New Dark Amethyst */
+            --aquarius-cyan: #00fbff; /* High-visibility Aquarius highlight */
             --electric-blue: #00d2ff;
             --azure: #007fff;
             --matte-gray: #0c1216;
@@ -37,25 +37,26 @@
             z-index: 1999;
         }
 
-        /* LOGO LOCK: Strictly anchored to viewport */
+        /* LOGO DOUBLE-LOCK: The absolute static fix */
         .logo {
             position: fixed; 
             top: 10px; 
             left: 5%;
             height: 240px; 
             width: auto;
-            z-index: 2100; /* Above everything else */
+            z-index: 9999; /* Higher than all other elements */
             filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.8));
             pointer-events: none;
             margin: 0;
+            will-change: transform; /* Forces browser to lock position */
         }
 
-        /* HEADER: Dark Amethyst with Black Border */
+        /* HEADER: Aquarius Glow Text */
         header {
             position: relative;
             height: 95vh;
             margin-top: 90px;
-            background: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05)), 
+            background: linear-gradient(rgba(4, 14, 20, 0.4), rgba(4, 14, 20, 0.4)), 
                         url('header.png');
             background-size: cover;
             background-position: center 20%;
@@ -75,17 +76,16 @@
             font-family: 'Playfair Display', serif;
             font-size: 3.8rem;
             margin: 0;
+            padding: 0 20px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: var(--deep-amethyst); /* Dark Amethyst */
+            color: var(--aquarius-cyan); /* Aquarius Highlight */
             line-height: 1.1;
-            /* High-End Black Border / Shadow Depth */
+            /* NEON GLOW: Multiple shadows for maximum visibility */
             text-shadow: 
-                -2px -2px 0 #000,  
-                 2px -2px 0 #000,
-                -2px  2px 0 #000,
-                 2px  2px 0 #000,
-                 0px 6px 12px rgba(0,0,0,0.8);
+                0 0 10px rgba(0, 251, 255, 0.8),
+                0 0 20px rgba(0, 251, 255, 0.4),
+                2px 2px 5px rgba(0, 0, 0, 1);
         }
 
         .promo-banner {
@@ -188,7 +188,7 @@
     <header>
         <div class="header-content">
             <h1>Get Super Glam<br>Services at home</h1>
-            <p style="letter-spacing: 5px; font-weight: 600; margin-top: 15px; color: var(--black-pearl); text-shadow: 1px 1px 0 #fff;">LUXURY SPA • PUNE</p>
+            <p style="letter-spacing: 5px; font-weight: 600; margin-top: 15px; color: #fff; text-shadow: 0 0 10px var(--aquarius-cyan);">LUXURY SPA • PUNE</p>
         </div>
     </header>
 
