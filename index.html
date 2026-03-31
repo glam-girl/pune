@@ -40,7 +40,7 @@
             align-items: center;
         }
 
-        /* FIXED LOGO: Locked to viewport, 3x size overlap */
+        /* FIXED LOGO */
         .logo {
             position: fixed; 
             top: 10px; 
@@ -51,18 +51,18 @@
             filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.8));
         }
 
-        /* Header using your local file: header.png */
+        /* HEADER ADJUSTMENT: Enhanced contrast for text standout */
         header {
             position: relative;
             height: 90vh;
             margin-top: 90px;
-            background: linear-gradient(rgba(4, 14, 20, 0.4), rgba(4, 14, 20, 0.7)), 
+            background: linear-gradient(rgba(4, 14, 20, 0.6), rgba(4, 14, 20, 0.85)), 
                         url('header.png');
             background-size: cover;
-            background-position: center 30%;
+            background-position: center;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify(content): center;
             text-align: center;
             border-bottom: 4px solid var(--amethyst);
         }
@@ -77,6 +77,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             line-height: 1.1;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5); /* Text depth */
         }
 
         .promo-banner {
@@ -119,6 +120,13 @@
         .strip-img {
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* ELITE SECTION FIX: massage.png using 'contain' to avoid heavy cropping */
+        #elite-massage-img {
+            background-size: contain; 
+            background-color: var(--matte-gray);
         }
 
         .footer {
@@ -160,8 +168,7 @@
             .logo { height: 140px; top: 15px; }
             .header-content h1 { font-size: 2.5rem; }
             .strip { grid-template-columns: 1fr; }
-            .strip-img { height: 350px; }
-            .icon-grid { flex-wrap: wrap; gap: 20px; }
+            .strip-img { height: 350px; background-size: cover !important; }
         }
     </style>
 </head>
@@ -174,7 +181,7 @@
     <header>
         <div class="header-content">
             <h1>Get Super Glam<br>Services at home</h1>
-            <p style="letter-spacing: 5px; font-weight: 300; margin-top: 20px; color: var(--azure);">LUXURY SPA • PUNE</p>
+            <p style="letter-spacing: 5px; font-weight: 300; margin-top: 20px; color: var(--electric-blue);">LUXURY SPA • PUNE</p>
         </div>
     </header>
 
@@ -198,7 +205,7 @@
                 <p>A restorative sensory experience using premium essential oils.</p>
             </div>
         </div>
-        <div class="strip-img" style="background-image: url('massage.png');"></div>
+        <div class="strip-img" id="elite-massage-img" style="background-image: url('massage.png');"></div>
     </section>
 
     <section class="strip" style="direction: rtl;">
