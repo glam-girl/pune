@@ -11,7 +11,7 @@
             --amethyst: #9b59b6;
             --electric-blue: #00d2ff;
             --azure: #007fff;
-            --matte-gray: #161616;
+            --matte-gray: #0c1216;
             --text-silver: #f4f4f4;
         }
 
@@ -24,14 +24,14 @@
             overflow-x: hidden;
         }
 
-        /* HARD CHANGE: Fixed and Saturated Navigation */
+        /* HARD FIX 1: The Nav must be fixed to anchor the logo */
         nav {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 90px;
-            background: rgba(4, 14, 20, 0.95); /* Matte Finish */
+            background: var(--black-pearl);
             border-bottom: 2px solid var(--amethyst);
             z-index: 2000;
             display: flex;
@@ -40,36 +40,31 @@
             align-items: center;
         }
 
-        /* HARD CHANGE: Logo Overlap with Fixed Positioning */
+        /* HARD FIX 2: Logo Overlap - FIXED (Locked on screen, does not scroll) */
         .logo {
             position: fixed; /* NEW: Changed from absolute to fixed */
-            top: 15px; 
+            top: 10px; 
             height: 240px; /* Thrice the standard size */
             width: auto;
             z-index: 2001; /* Must be on top of everything */
-            filter: drop-shadow(0px 8px 15px rgba(0,0,0,0.6));
+            filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.8));
         }
 
-        /* Hero Header with High-contrast Overlay for Readability */
+        /* Hero Header with High-resolution, Female-only Imagery */
         header {
             position: relative;
-            height: 100vh;
+            height: 90vh;
             margin-top: 90px; /* Offset for nav */
-            /* NEW: Long shot focusing exclusively on a beautiful Indian woman relaxing */
+            /* IMAGE 1: EXCLUSIVE SERENE INDIAN FEMALE CLIENT, NO THERAPIST */
             background: linear-gradient(rgba(4, 14, 20, 0.4), rgba(4, 14, 20, 0.7)), 
-                        url('http://googleusercontent.com/image_collection/image_gen/8739943264426214197_0');
+                        url('https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1600&q=80');
             background-size: cover;
             background-position: center 30%;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 0 20px;
-            border-bottom: 3px solid var(--electric-blue);
-        }
-
-        .header-content {
-            z-index: 1000;
+            border-bottom: 4px solid var(--amethyst);
         }
 
         .header-content h1 {
@@ -78,7 +73,6 @@
             margin: 0;
             text-transform: uppercase;
             letter-spacing: 2px;
-            /* Saturated Text Gradient */
             background: linear-gradient(to right, var(--azure), var(--electric-blue));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -91,30 +85,21 @@
             padding: 20px;
             text-align: center;
             font-weight: 700;
-            font-size: 1.15rem;
-            letter-spacing: 2px;
             text-transform: uppercase;
-            box-shadow: 0 5px 20px rgba(0, 210, 255, 0.3);
+            letter-spacing: 3px;
         }
 
-        .container {
-            max-width: 1300px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
-
-        /* Matte Strip Layout (No Soft Shadows) */
+        /* Service Strips - Alternating High-Res Layout */
         .strip {
             display: grid;
             grid-template-columns: 1fr 1fr;
             min-height: 550px;
             background: var(--matte-gray);
-            border: 1px solid #1a262e;
-            margin-bottom: 20px;
+            border-bottom: 1px solid #1a262e;
         }
 
         .strip-content {
-            padding: 10% 12%;
+            padding: 8% 10%;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -122,40 +107,39 @@
 
         .strip-content h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             color: var(--electric-blue);
-            margin: 0 0 25px 0;
+            margin-bottom: 25px;
             text-transform: uppercase;
         }
 
         .item { margin-bottom: 20px; border-left: 3px solid var(--amethyst); padding-left: 20px; }
         .item strong { color: var(--azure); display: block; font-size: 1.1rem; text-transform: uppercase; }
-        .item p { margin: 5px 0 0 0; color: #bbb; font-size: 1rem; }
+        .item p { margin: 5px 0 0 0; color: #aaa; font-size: 0.95rem; }
 
         .strip-img {
             background-size: cover;
             background-position: center;
         }
 
-        /* Visually Enhanced Footer */
+        /* Footer & Icons */
         .footer {
-            background: var(--matte-gray);
+            background: var(--black-pearl);
             padding: 100px 20px;
             text-align: center;
-            border-top: 3px solid var(--amethyst);
+            border-top: 2px solid var(--amethyst);
         }
 
         .icon-grid {
             display: flex;
             justify-content: center;
-            gap: 50px;
-            margin: 50px auto;
-            max-width: 800px;
+            gap: 40px;
+            margin-bottom: 40px;
         }
 
         .icon-box { text-align: center; min-width: 100px; }
-        .icon-box span { font-size: 3rem; display: block; margin-bottom: 15px; color: var(--amethyst); opacity: 0.8; }
-        .icon-box p { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--electric-blue); }
+        .icon-box span { font-size: 2.5rem; display: block; margin-bottom: 10px; color: var(--amethyst); }
+        .icon-box p { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--electric-blue); }
 
         .btn {
             display: inline-block;
@@ -166,21 +150,16 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
-            transition: 0.3s ease;
-            box-shadow: 0 10px 20px rgba(0, 127, 255, 0.3);
+            transition: 0.3s;
+            border: 2px solid transparent;
         }
 
-        .btn:hover { background: transparent; border-color: var(--electric-blue); color: var(--electric-blue); transform: scale(1.05); }
+        .btn:hover { background: transparent; border-color: var(--electric-blue); color: var(--electric-blue); }
 
-        .phone { font-size: 3rem; color: #fff; margin: 40px 0; display: block; font-weight: 600; letter-spacing: 1px; }
-
-        @media (max-width: 1024px) {
-            .header-content h1 { font-size: 3.5rem; }
-            .logo { height: 160px; }
-        }
+        .phone { font-size: 2.8rem; color: #fff; margin: 40px 0; display: block; font-weight: 600; }
 
         @media (max-width: 768px) {
-            .logo { height: 130px; top: 15px; }
+            .logo { height: 140px; top: 15px; }
             .header-content h1 { font-size: 2.5rem; }
             .strip { grid-template-columns: 1fr; }
             .strip-img { height: 350px; }
@@ -197,83 +176,81 @@
     <header>
         <div class="header-content">
             <h1>Get Super Glam<br>Services at home</h1>
-            <p style="letter-spacing: 6px; font-weight: 300; margin-top: 25px; color: var(--electric-blue); text-transform: uppercase;">Exclusive Spa • Pune</p>
+            <p style="letter-spacing: 5px; font-weight: 300; margin-top: 20px; color: var(--azure);">LUXURY SPA • PUNE</p>
         </div>
     </header>
 
     <div class="promo-banner">
-        FIRST-TIME BOOKING? GET 600/- OFF | CODE: GGPS
+        CODE: GGPS | 600/- OFF YOUR FIRST BOOKING
     </div>
 
-    <div class="container">
-        <section class="strip">
-            <div class="strip-content">
-                <h2>Elite Massages</h2>
-                <div class="item">
-                    <strong>Swedish Relaxation</strong>
-                    <p>Gentle strokes designed for deep calm and stress recovery.</p>
-                </div>
-                <div class="item">
-                    <strong>Deep Tissue Therapy</strong>
-                    <p>Focused pressure points to release deep-seated muscle knots.</p>
-                </div>
-                <div class="item">
-                    <strong>Aromatherapy Healing</strong>
-                    <p>A restorative sensory experience using premium essential oils.</p>
-                </div>
+    <section class="strip">
+        <div class="strip-content">
+            <h2>Elite Massages</h2>
+            <div class="item">
+                <strong>Swedish Relaxation</strong>
+                <p>Gentle strokes designed for deep calm and total stress recovery.</p>
             </div>
-            <div class="strip-img" style="background-image: url('http://googleusercontent.com/image_collection/image_gen/8061448839075305118_0');"></div>
-        </section>
+            <div class="item">
+                <strong>Deep Tissue Therapy</strong>
+                <p>Focused pressure points to release deep-seated muscle knots.</p>
+            </div>
+            <div class="item">
+                <strong>Aromatherapy</strong>
+                <p>A restorative sensory experience using premium essential oils.</p>
+            </div>
+        </div>
+        <div class="strip-img" style="background-image: url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1000&q=80');"></div>
+    </section>
 
-        <section class="strip" style="direction: rtl;">
-            <div class="strip-content" style="direction: ltr;">
-                <h2>Skin Scrubs</h2>
-                <div class="item">
-                    <strong>Himalayan Pink Salt</strong>
-                    <p>Deep exfoliation to remove toxins and reveal radiant skin.</p>
-                </div>
-                <div class="item">
-                    <strong>Organic Herb Infusion</strong>
-                    <p>Soothing botanical care tailored specifically for sensitive skin types.</p>
-                </div>
+    <section class="strip" style="direction: rtl;">
+        <div class="strip-content" style="direction: ltr;">
+            <h2>Skin Scrubs</h2>
+            <div class="item">
+                <strong>Himalayan Pink Salt</strong>
+                <p>Mineral-rich exfoliation for an instant, healthy radiance.</p>
             </div>
-            <div class="strip-img" style="background-image: url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=80');"></div>
-        </section>
+            <div class="item">
+                <strong>Organic Herb Infusion</strong>
+                <p>Soothing botanical care tailored specifically for sensitive skin types.</p>
+            </div>
+        </div>
+        <div class="strip-img" style="background-image: url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1000&q=80');"></div>
+    </section>
 
-        <section class="strip">
-            <div class="strip-content">
-                <h2>Body Polishing</h2>
-                <div class="item">
-                    <strong>Cacao & Coffee Polish</strong>
-                    <p>Stimulating caffeine-infused treatment to firm and brighten skin texture.</p>
-                </div>
-                <div class="item">
-                    <strong>Luxury Tan Removal</strong>
-                    <p>A decadent treatment designed to restore your skin's natural, soft glow.</p>
-                </div>
+    <section class="strip">
+        <div class="strip-content">
+            <h2>Body Polishing</h2>
+            <div class="item">
+                <strong>Cacao & Coffee Polish</strong>
+                <p>Stimulating caffeine-infused treatment to firm and brighten skin.</p>
             </div>
-            <div class="strip-img" style="background-image: url('https://images.unsplash.com/photo-1601053416244-659f81f18579?auto=format&fit=crop&w=1200&q=80');"></div>
-        </section>
+            <div class="item">
+                <strong>Luxury Tan Removal</strong>
+                <p>A decadent treatment designed to restore your skin's natural, soft glow.</p>
+            </div>
+        </div>
+        <div class="strip-img" style="background-image: url('https://images.unsplash.com/photo-1601053416244-659f81f18579?auto=format&fit=crop&w=1000&q=80');"></div>
+    </section>
 
-        <section class="strip" style="direction: rtl;">
-            <div class="strip-content" style="direction: ltr;">
-                <h2>Smooth Waxing</h2>
-                <div class="item">
-                    <strong>Premium Rica Waxing</strong>
-                    <p>Elite Italian wax for long-lasting, silky smooth results.</p>
-                </div>
-                <div class="item">
-                    <strong>Honey & Aloe Care</strong>
-                    <p>Traditional, natural hair removal for a clean and hydrated finish.</p>
-                </div>
+    <section class="strip" style="direction: rtl;">
+        <div class="strip-content" style="direction: ltr;">
+            <h2>Smooth Waxing</h2>
+            <div class="item">
+                <strong>Premium Rica Waxing</strong>
+                <p>Elite Italian wax for long-lasting, silky smooth results.</p>
             </div>
-            <div class="strip-img" style="background-image: url('https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=1200&q=80');"></div>
-        </section>
-    </div>
+            <div class="item">
+                <strong>Honey & Aloe Care</strong>
+                <p>Traditional, natural hair removal for a clean and soft finish.</p>
+            </div>
+        </div>
+        <div class="strip-img" style="background-image: url('https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=1000&q=80');"></div>
+    </section>
 
     <section class="footer">
         <h2>Professional therapist at your doorstep</h2>
-        <p style="letter-spacing: 2px; color: var(--azure); font-weight: 300;">EXPERT WELLNESS • PUNE</p>
+        <p>Expert Wellness Delivered Across Pune</p>
         
         <div class="icon-grid">
             <div class="icon-box"><span>✦</span><p>Premium</p></div>
