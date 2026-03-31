@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glam Girl | Luxury Home Spa & Salon Pune</title>
+    <title>Glam Girl | Luxury Home Spa Pune</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -11,216 +11,238 @@
             --amethyst: #9b59b6;
             --electric-blue: #00d2ff;
             --azure: #007fff;
-            --text-silver: #e0e0e0;
+            --matte-gray: #1a1a1a;
         }
 
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             background-color: var(--black-pearl);
-            color: var(--text-silver);
+            color: #ffffff;
             line-height: 1.6;
         }
 
-        /* Hero Section - Focusing on the "At-Home" Luxury Vibe */
-        header {
-            background: linear-gradient(rgba(4, 14, 20, 0.7), rgba(4, 14, 20, 0.8)), 
-                        url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1600&q=80');
-            background-size: cover;
-            background-position: center;
-            height: 70vh;
+        /* Top Navigation Bar */
+        nav {
+            background: var(--black-pearl);
+            padding: 20px 5%;
             display: flex;
-            flex-direction: column;
+            justify-content: flex-start; /* Logo on the left */
             align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 0 20px;
-            border-bottom: 3px solid var(--electric-blue);
+            border-bottom: 1px solid var(--azure);
         }
 
         .logo {
-            width: 100%;
-            max-width: 380px;
-            height: auto;
-            margin-bottom: 10px;
-            filter: drop-shadow(0px 0px 20px var(--azure));
+            height: 60px; /* Smaller, professional size */
+            width: auto;
         }
 
-        .hero-tagline {
-            font-size: 1.2rem;
-            color: var(--electric-blue);
-            letter-spacing: 3px;
+        /* Hero Section - High Resolution & Matte Finish */
+        header {
+            position: relative;
+            height: 65vh;
+            background: linear-gradient(rgba(4, 14, 20, 0.5), rgba(4, 14, 20, 0.5)), 
+                        url('https://images.unsplash.com/photo-1519824141121-b97674299873?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin: 0;
             text-transform: uppercase;
-            font-weight: 600;
+            letter-spacing: 4px;
+            color: var(--electric-blue);
         }
 
         .promo-banner {
-            background: linear-gradient(90deg, var(--azure), var(--amethyst));
-            color: white;
-            padding: 20px;
+            background: var(--azure);
+            color: #fff;
+            padding: 15px;
             text-align: center;
-            font-weight: 700;
-            font-size: 1.1rem;
-            letter-spacing: 1px;
-            box-shadow: 0 5px 20px rgba(0, 210, 255, 0.4);
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
         .container {
             max-width: 1200px;
             margin: 60px auto;
-            padding: 0 25px;
-        }
-
-        .intro-text {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .intro-text h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            color: white;
+            padding: 0 20px;
         }
 
         .service-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 35px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
 
+        /* Matte Service Cards - No Shadows */
         .service-card {
-            background: rgba(255, 255, 255, 0.03);
+            background: var(--matte-gray);
             padding: 40px;
-            border-radius: 20px;
-            border: 1px solid rgba(155, 89, 182, 0.2);
-            transition: all 0.4s ease;
+            border: 1px solid var(--amethyst);
+            transition: background 0.3s ease;
         }
 
         .service-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--electric-blue);
-            background: rgba(255, 255, 255, 0.05);
+            background: #252525;
         }
 
         .service-card h2 {
             font-family: 'Playfair Display', serif;
             color: var(--electric-blue);
-            font-size: 1.8rem;
-            margin-bottom: 20px;
+            font-size: 1.5rem;
+            margin-top: 0;
+            border-left: 4px solid var(--azure);
+            padding-left: 15px;
         }
 
         .sub-service {
-            margin-bottom: 25px;
+            margin-top: 25px;
         }
 
         .sub-service strong {
             color: var(--amethyst);
             display: block;
-            font-size: 1.1rem;
-            margin-bottom: 5px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
         }
 
+        .sub-service p {
+            font-size: 0.95rem;
+            color: #ccc;
+            margin: 5px 0;
+        }
+
+        /* Contact Section - Solid Color Blocks */
         .contact-section {
-            background: #06161f;
-            text-align: center;
+            background: var(--matte-gray);
             padding: 80px 20px;
-            border-top: 1px solid rgba(0, 210, 255, 0.2);
+            text-align: center;
+            border-top: 2px solid var(--azure);
+        }
+
+        .contact-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
         }
 
         .btn {
             display: inline-block;
-            background: linear-gradient(45deg, var(--azure), var(--electric-blue));
+            background: var(--azure);
             color: white;
-            padding: 18px 45px;
+            padding: 18px 40px;
             text-decoration: none;
-            border-radius: 50px;
-            font-weight: 700;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             margin-top: 30px;
-            box-shadow: 0 10px 20px rgba(0, 127, 255, 0.3);
-            transition: 0.3s;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
         }
 
-        .btn:hover { transform: scale(1.05); }
+        .btn:hover {
+            background: transparent;
+            border-color: var(--electric-blue);
+            color: var(--electric-blue);
+        }
+
+        .phone-number {
+            font-size: 2rem;
+            color: var(--electric-blue);
+            display: block;
+            margin: 20px 0;
+            font-weight: 600;
+        }
 
         @media (max-width: 768px) {
-            .logo { max-width: 280px; }
-            header { height: 55vh; }
+            .hero-content h1 { font-size: 2rem; }
+            nav { justify-content: center; }
         }
     </style>
 </head>
 <body>
 
+    <nav>
+        <img src="shared image.jpg" alt="Glam Girl" class="logo">
+    </nav>
+
     <header>
-        <img src="logo.jpg" alt="Glam Girl Logo" class="logo">
-        <p class="hero-tagline">Your Glow-Up, Delivered.</p>
+        <div class="hero-content">
+            <h1>Stay Glam. Stay Home.</h1>
+            <p style="letter-spacing: 2px; font-weight: 300;">Luxury Salon & Spa Services in Pune</p>
+        </div>
     </header>
 
     <div class="promo-banner">
-        ✨ FIRST TIME? GET 600/- OFF WITH CODE: <b>GGPS</b> ✨
+        CODE: GGPS | 600/- OFF YOUR FIRST BOOKING
     </div>
 
     <div class="container">
-        <div class="intro-text">
-            <h1>Skip the traffic. Stay Glam.</h1>
-            <p>Why head to a salon when the salon can come to you? We bring Pune's premium spa experience right to your living room. Professional, safe, and totally relaxing.</p>
-        </div>
-
         <div class="service-grid">
             <div class="service-card">
-                <h2>Elite Relaxation</h2>
+                <h2>Elite Massages</h2>
                 <div class="sub-service">
                     <strong>Deep Tissue Therapy</strong>
-                    For when the week has been too long. Our expert male therapists melt away muscle tension so you can hit reset.
+                    <p>Relieve chronic tension with professional male therapists specializing in sports-level recovery.</p>
                 </div>
                 <div class="sub-service">
-                    <strong>Swedish Bliss</strong>
-                    The ultimate "me-time" treat. Light, fluid strokes designed to de-stress your mind and body.
+                    <strong>Swedish Relaxation</strong>
+                    <p>Designed to calm the mind and body. Perfect for a weekend reset.</p>
                 </div>
                 <div class="sub-service">
-                    <strong>Aromatherapy Healing</strong>
-                    Luxury oils and expert pressure points to leave you smelling like a dream and feeling brand new.
+                    <strong>Aromatherapy</strong>
+                    <p>A sensory journey using premium oils to revitalize your skin and mood.</p>
                 </div>
             </div>
 
             <div class="service-card">
-                <h2>Skin Refresh</h2>
+                <h2>Body Polishing</h2>
                 <div class="sub-service">
-                    <strong>Himalayan Glow Scrub</strong>
-                    Dull skin? Not here. Mineral-rich exfoliation that leaves you with that "just-vacationed" radiance.
+                    <strong>Himalayan Salt Glow</strong>
+                    <p>Mineral-rich exfoliation for an instant, healthy radiance.</p>
                 </div>
                 <div class="sub-service">
-                    <strong>Coffee & Cacao Polish</strong>
-                    A treat for your skin. Caffeine firms while cacao hydrates—perfect for a weekend glow-up.
+                    <strong>Cacao & Coffee Polish</strong>
+                    <p>A stimulating treatment to firm skin and provide a natural glow.</p>
                 </div>
                 <div class="sub-service">
                     <strong>Botanical Renewal</strong>
-                    Nature’s best herbs for sensitive skin. Clean, organic, and incredibly soothing.
+                    <p>Gentle, organic plant-based care for sensitive skin types.</p>
                 </div>
             </div>
 
             <div class="service-card">
-                <h2>Silky Smooth</h2>
+                <h2>Skin & Waxing</h2>
                 <div class="sub-service">
                     <strong>Premium Rica Waxing</strong>
-                    Italian luxury wax that’s gentle on your skin but tough on hair. Smooth skin, zero stress.
+                    <p>Luxury Italian wax for long-lasting, silky smooth results.</p>
                 </div>
                 <div class="sub-service">
                     <strong>Chocolate Tan Removal</strong>
-                    Decadent chocolate wax that removes tan and leaves your skin soft and hydrated.
+                    <p>Effective tan removal that leaves skin feeling soft and hydrated.</p>
                 </div>
                 <div class="sub-service">
                     <strong>Honey & Aloe Care</strong>
-                    Classic, natural hair removal for a clean finish that lasts.
+                    <p>The traditional choice for gentle and clean hair removal.</p>
                 </div>
             </div>
         </div>
     </div>
 
     <section class="contact-section">
-        <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--electric-blue);">Ready to Relax?</h2>
-        <p>Available across Pune | Professional Male Staff</p>
-        <p style="font-size: 2.2rem; color: white; margin: 20px 0;"><b>7972954291</b></p>
-        <a href="https://wa.me/917972954291" class="btn">BOOK YOUR SESSION ON WHATSAPP</a>
+        <h2>Expert Care. Anywhere.</h2>
+        <p>Available across Pune | Professional Male Therapists Only</p>
+        <span class="phone-number">7972954291</span>
+        <a href="https://wa.me/917972954291" class="btn">Book via WhatsApp</a>
     </section>
 
 </body>
