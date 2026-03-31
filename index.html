@@ -37,22 +37,22 @@
             z-index: 1999;
         }
 
-        /* THE NUCLEAR LOGO LOCK */
+        /* THE ABSOLUTE STATIC LOGO - Sharp & Unmoving */
         .logo {
-            position: fixed !important; /* Forces the browser to ignore other layout rules */
-            top: 10px !important; 
+            position: fixed !important;
+            top: 10px !important;
             left: 5% !important;
-            height: 240px; 
+            height: 240px;
             width: auto;
-            z-index: 9999 !important; /* Ensures it stays on top of everything */
-            filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.8));
+            z-index: 9999 !important;
+            /* Shadow Removed for Sharpness */
+            filter: none !important; 
             pointer-events: none;
             margin: 0 !important;
-            padding: 0 !important;
-            /* Hardware Acceleration Fixes */
-            transform: translateZ(0);
-            -webkit-transform: translateZ(0);
-            backface-visibility: hidden;
+            /* High-Performance Locking */
+            transform: translate3d(0, 0, 0);
+            -webkit-transform: translate3d(0, 0, 0);
+            image-rendering: -webkit-optimize-contrast; /* Sharp edges */
         }
 
         header {
@@ -183,8 +183,6 @@
 </head>
 <body>
 
-    <img src="logo.jpg" alt="Glam Girl" class="logo">
-
     <nav></nav>
 
     <header>
@@ -250,6 +248,8 @@
         <span class="phone">7972954291</span>
         <a href="https://wa.me/917972954291" class="btn">Book via WhatsApp</a>
     </section>
+
+    <img src="logo.jpg" alt="Glam Girl" class="logo">
 
 </body>
 </html>
